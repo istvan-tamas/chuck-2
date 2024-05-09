@@ -7,10 +7,12 @@ let loadJoke = () => {
 			let data = JSON.parse(joke.responseText);
 			attachImg('https://imgflip.com/s/meme/Chuck-Norris-Guns.jpg');
 			document.querySelector('#joke').innerHTML = data.value;
+		} else {
+			document.querySelector('#joke').innerHTML = 'Something went wrong!';
 		}
 	};
 	joke.open('GET', 'https://api.chucknorris.io/jokes/random', true);
-	joke.send(null);
+	joke.send();
 };
 
 let attachImg = (imgSrc) => {
