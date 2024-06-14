@@ -17,11 +17,11 @@ let loadJoke = () => {
 
 let attachImg = (imgSrc) => {
 	let img = document.createElement('img');
-	img.width = '130';
-	img.height = '130';
+	img.width = '100';
+	img.height = '100';
 	img.src = imgSrc;
 	document.querySelector('.container').append(img);
 };
 
 button.addEventListener('click', loadJoke);
-document.onload = loadJoke();
+document.onload(loadJoke());
